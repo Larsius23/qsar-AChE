@@ -55,12 +55,12 @@ print(f"         Test set:     {X_test.shape}")
 
 # Save processed data
 import os
-os.makedirs('../data/processed', exist_ok=True)
+os.makedirs('/Users/larsius/Desktop/codex/qsar-AChE/data/processed', exist_ok=True)
 
-np.save('../data/processed/X_train.npy', X_train.values)
-np.save('../data/processed/X_test.npy', X_test.values)
-np.save('../data/processed/y_train.npy', y_train)
-np.save('../data/processed/y_test.npy', y_test)
+np.save('/Users/larsius/Desktop/codex/qsar-AChE/data/processed/X_train.npy', X_train.values)
+np.save('/Users/larsius/Desktop/codex/qsar-AChE/data/processed/X_test.npy', X_test.values)
+np.save('/Users/larsius/Desktop/codex/qsar-AChE/data/processed/y_train.npy', y_train)
+np.save('/Users/larsius/Desktop/codex/qsar-AChE/data/processed/y_test.npy', y_test)
 
 # Save descriptor names for later
 pd.Series(X.columns.tolist()).to_csv('../data/processed/descriptor_names.csv', index=False)
