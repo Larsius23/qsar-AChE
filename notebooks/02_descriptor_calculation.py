@@ -7,7 +7,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Load clean dataset
-df =pd.read_csv('/Users/larsius/Desktop/codex/qsar-AChE/data/AChE-cleaned.csv')
+df =pd.read_csv('../data/AChE-cleaned.csv')
 print(f"Loaded: {df.shape}")
 print(df.head())
 
@@ -42,5 +42,5 @@ print(f"Final shape: {df_final.shape}")
 print(f"Any NaN values: {df_final.isnull().sum().sum()}")
 
 # Save
-df_final.to_csv('/Users/larsius/Desktop/codex/qsar-AChE/data/AChE_descriptors.csv', index=False)
-print("SAVED: /Users/larsius/Desktop/codex/qsar-AChE/data/AChE_descriptors.csv")
+df_final.to_csv('../data/AChE_descriptors.csv', index=False)
+print("SAVED: /data/AChE_descriptors.csv")

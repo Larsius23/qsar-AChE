@@ -7,7 +7,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-df = pd.read_csv('/Users/larsius/Desktop/codex/qsar-AChE/data/raw_chembl-AChE.csv', sep=';')
+df = pd.read_csv('../data/raw_chembl-AChE.csv', sep=';')
 
 print(f"Raw data shape: {df.shape}")
 print(f"\nColumn names:\n{list(df.columns)}")
@@ -67,7 +67,7 @@ df = df[df['valid']].drop(columns=['valid'])
 print(f"Final dataset shape: {df.shape}")
 
 # Save clean dataset
-df.to_csv('/Users/larsius/Desktop/codex/qsar-AChE/data/AChE-cleaned.csv', index=False)
+df.to_csv('../data/AChE-cleaned.csv', index=False)
 print(f"\nSaved: data/AChE-cleaned.csv")
 
 # EDA - pIC50 distribution
@@ -80,6 +80,6 @@ plt.ylabel('Count')
 plt.title('Distribution of pIC50 Values - AChE Inhibitors')
 plt.legend()
 plt.tight_layout()
-plt.savefig('/Users/larsius/Desktop/codex/qsar-AChE/results/figures/phase1_pIC50_distribution.png', dpi=300)
+plt.savefig('../results/figures/phase1_pIC50_distribution.png', dpi=300)
 plt.show()
 print("SAVED: results/figures/phase1_pIC50_distribution.png")
